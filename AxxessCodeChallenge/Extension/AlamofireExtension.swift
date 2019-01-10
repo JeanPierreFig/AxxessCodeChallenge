@@ -9,7 +9,8 @@
 import Foundation
 import Alamofire
 
-//https://gist.github.com/hirohisa/76627c0c4fffa5dce878b9633acadf36
+//Source https://gist.github.com/hirohisa/76627c0c4fffa5dce878b9633acadf36
+
 extension Alamofire.DataRequest {
     @discardableResult
     func decodable<T: Decodable>(success: @escaping (T) -> Void, failure: @escaping (Error?) -> Void) -> Self {

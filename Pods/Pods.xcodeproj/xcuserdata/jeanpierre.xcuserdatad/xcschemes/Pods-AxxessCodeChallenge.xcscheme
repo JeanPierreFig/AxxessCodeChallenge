@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C9F8AC95BE061C0888BD685E935367CF"
+               BlueprintIdentifier = "4BCE90F0BA461ED363B5F25A8E5F105F"
                BuildableName = "Pods_AxxessCodeChallenge.framework"
                BlueprintName = "Pods-AxxessCodeChallenge"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C9F8AC95BE061C0888BD685E935367CF"
+            BlueprintIdentifier = "4BCE90F0BA461ED363B5F25A8E5F105F"
             BuildableName = "Pods_AxxessCodeChallenge.framework"
             BlueprintName = "Pods-AxxessCodeChallenge"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 public class Network {
     
@@ -38,6 +39,23 @@ public class Network {
         //TODO: Create parameters/headers if needed for other endpoints.
     }
     
+    //MARK: Requests
+    
+    
+    /**
+     - Parameter endpoint: Url endpoint, enum type Endpoints.
+     - Parameter completionHandler: handel decoded endpoint data of type T optional.
+     
+     ### Uses Example: ###
+     ````
+     Network.request(endpoint: .Challenge) { (content: [Content]?) in
+        if let content = content {
+            print(content)
+        }
+     }
+     ````
+     
+     */
     public static func request<T:Decodable>(endpoint: Endpoints , completionHandler: @escaping (T?) -> Void)  {
         Alamofire.request(endpoint.path, method: endpoint.method, parameters: nil, encoding: JSONEncoding.default, headers: nil).decodable(success: { (data:T?)  in
             completionHandler(data)

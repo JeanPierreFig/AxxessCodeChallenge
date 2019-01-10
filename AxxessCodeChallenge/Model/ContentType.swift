@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ContentType: String, Codable {
+enum ContentType: String, Codable, CaseIterable {
     case Text = "text"
     case Image = "image"
     case Other = "other"

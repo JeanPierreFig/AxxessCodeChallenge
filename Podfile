@@ -7,6 +7,7 @@ target 'AxxessCodeChallenge' do
 
   # Pods for AxxessCodeChallenge
   pod 'Alamofire', '~> 4.8.0'
+  pod 'AlamofireImage', '~> 3.5.0'
   pod 'SnapKit', '~> 4.0.0'
  
   target 'AxxessCodeChallengeTests' do

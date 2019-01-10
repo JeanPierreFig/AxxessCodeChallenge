@@ -10,6 +10,9 @@
 		2704D13684D5FE74D891C401 /* Pods_AxxessCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F740B52E4F8A09567D49A2 /* Pods_AxxessCodeChallengeTests.framework */; };
 		3AF4B95A85136D86B8958E51 /* Pods_AxxessCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5E3326A0787F4D25DFCA19 /* Pods_AxxessCodeChallenge.framework */; };
 		F7516E0D21E5BEDB0078D237 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7516E0C21E5BEDB0078D237 /* DateExtension.swift */; };
+		F755934B21E5E77D009BE194 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755934A21E5E77D009BE194 /* ImageTableViewCell.swift */; };
+		F755934D21E6ABEB009BE194 /* ContentListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755934C21E6ABEB009BE194 /* ContentListDataSource.swift */; };
+		F755934F21E6BB73009BE194 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755934E21E6BB73009BE194 /* TextTableViewCell.swift */; };
 		F7BE7ED721E52C8A00CD0A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7ED621E52C8A00CD0A07 /* AppDelegate.swift */; };
 		F7BE7ED921E52C8A00CD0A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7ED821E52C8A00CD0A07 /* ViewController.swift */; };
 		F7BE7EDE21E52C8C00CD0A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BE7EDD21E52C8C00CD0A07 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		9FBF021F8CFD9B601B6204B5 /* Pods-AxxessCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessCodeChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AxxessCodeChallenge/Pods-AxxessCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		ACD2D6F6BDFB7C9B5B03C583 /* Pods-AxxessCodeChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AxxessCodeChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AxxessCodeChallengeTests/Pods-AxxessCodeChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7516E0C21E5BEDB0078D237 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F755934A21E5E77D009BE194 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		F755934C21E6ABEB009BE194 /* ContentListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListDataSource.swift; sourceTree = "<group>"; };
+		F755934E21E6BB73009BE194 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		F7BE7ED321E52C8A00CD0A07 /* AxxessCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxxessCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BE7ED621E52C8A00CD0A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7BE7ED821E52C8A00CD0A07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 		F755934921E5DE24009BE194 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F755934A21E5E77D009BE194 /* ImageTableViewCell.swift */,
+				F755934E21E6BB73009BE194 /* TextTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,11 +158,12 @@
 			isa = PBXGroup;
 			children = (
 				F7BE7ED621E52C8A00CD0A07 /* AppDelegate.swift */,
+				F755934C21E6ABEB009BE194 /* ContentListDataSource.swift */,
+				F7BE7EF821E585B300CD0A07 /* Model */,
 				F755934921E5DE24009BE194 /* View */,
 				F755934821E5DE0F009BE194 /* Controller  */,
 				F755934721E5DDFA009BE194 /* Network */,
 				F7516E0B21E5BEB30078D237 /* Extension */,
-				F7BE7EF821E585B300CD0A07 /* Model */,
 				F7BE7EDD21E52C8C00CD0A07 /* Assets.xcassets */,
 				F7BE7EDF21E52C8C00CD0A07 /* LaunchScreen.storyboard */,
 				F7BE7EE221E52C8C00CD0A07 /* Info.plist */,
@@ -323,11 +332,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AxxessCodeChallenge/Pods-AxxessCodeChallenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,12 +354,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7BE7EFC21E5897500CD0A07 /* ContentType.swift in Sources */,
+				F755934B21E5E77D009BE194 /* ImageTableViewCell.swift in Sources */,
 				F7516E0D21E5BEDB0078D237 /* DateExtension.swift in Sources */,
 				F7BE7ED921E52C8A00CD0A07 /* ViewController.swift in Sources */,
+				F755934F21E6BB73009BE194 /* TextTableViewCell.swift in Sources */,
 				F7BE7EFA21E585E700CD0A07 /* Content.swift in Sources */,
 				F7BE7EF721E5302C00CD0A07 /* Network.swift in Sources */,
 				F7BE7EFE21E5901800CD0A07 /* AlamofireExtension.swift in Sources */,
 				F7BE7ED721E52C8A00CD0A07 /* AppDelegate.swift in Sources */,
+				F755934D21E6ABEB009BE194 /* ContentListDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
