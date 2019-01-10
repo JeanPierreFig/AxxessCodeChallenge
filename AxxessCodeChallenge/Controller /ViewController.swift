@@ -36,8 +36,13 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             }
             else {
-                //TODO: and network alert
-                
+                let alert = UIAlertController(title: "No connection", message: "Check if you are connected to the internet.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Try again", style: .default, handler:{ _ in
+                        //Call the network again.
+                        self.networkCall()
+                    }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
