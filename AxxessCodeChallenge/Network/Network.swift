@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import AlamofireImage
 
 public class Network {
     
@@ -33,14 +32,12 @@ public class Network {
             case .Challenge:
                 return baseURL+"/challenge.json"
             }
-            
         }
         
         //TODO: Create parameters/headers if needed for other endpoints.
     }
     
     //MARK: Requests
-    
     
     /**
      - Parameter endpoint: Url endpoint, enum type Endpoints.
@@ -54,7 +51,6 @@ public class Network {
         }
      }
      ````
-     
      */
     public static func request<T:Decodable>(endpoint: Endpoints , completionHandler: @escaping (T?) -> Void)  {
         Alamofire.request(endpoint.path, method: endpoint.method, parameters: nil, encoding: JSONEncoding.default, headers: nil).decodable(success: { (data:T?)  in

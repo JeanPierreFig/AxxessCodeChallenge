@@ -34,8 +34,6 @@ class ImageTableViewCell: UITableViewCell {
         }
     }
     
-    
-
     lazy var dateLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = UIColor.lightGray
@@ -81,7 +79,5 @@ class ImageTableViewCell: UITableViewCell {
                 make.bottomMargin.equalTo(self.contentView).offset(-15)
             }
         }
-        
     }
-
 }

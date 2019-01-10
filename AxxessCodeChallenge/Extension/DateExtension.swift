@@ -39,7 +39,6 @@ extension Date {
      }
      ````
      */
-
    public static func dateFormat(date: Date) -> String {
         let convertTo = DateFormatter()
         convertTo.dateFormat = "dd/MM/yyyy"

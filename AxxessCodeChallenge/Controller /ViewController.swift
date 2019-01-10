@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
+        tableView.separatorStyle = .none
         //Using the class name as the Reuse Identifier.
         tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: "\(ImageTableViewCell.self)")
         tableView.register(TextTableViewCell.self, forCellReuseIdentifier: "\(TextTableViewCell.self)")
@@ -33,6 +34,10 @@ class ViewController: UIViewController {
             if let content = content {
                 self.datasource.dataSource = content
                 self.tableView.reloadData()
+            }
+            else {
+                //TODO: and network alert
+                
             }
         }
     }
@@ -55,4 +60,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Deselect the row to remove the gray background color.
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let vc = DetailViewController()
+        vc.data = datasource.dataSourceInSections[indexPath.section][indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

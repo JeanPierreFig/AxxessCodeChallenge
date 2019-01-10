@@ -43,12 +43,22 @@ class ContentListDataSource: NSObject, UITableViewDataSource {
         if dataSourceInSections[indexPath.section][indexPath.row].type == .Image {
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(ImageTableViewCell.self)", for: indexPath) as? ImageTableViewCell
             cell?.data = dataSourceInSections[indexPath.section][indexPath.row]
+            //cell?.selectionStyle = .none
             return cell!
             
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(TextTableViewCell.self)", for: indexPath) as? TextTableViewCell
             cell?.data = dataSourceInSections[indexPath.section][indexPath.row]
+          //  cell?.selectionStyle = .none
             return cell!
         }
+    }
+}
+
+extension ContentListDataSource: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.data = dataSourceInSections[indexPath.section][indexPath.row]
     }
 }

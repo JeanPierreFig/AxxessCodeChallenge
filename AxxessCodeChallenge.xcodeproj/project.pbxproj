@@ -13,6 +13,7 @@
 		F755934B21E5E77D009BE194 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755934A21E5E77D009BE194 /* ImageTableViewCell.swift */; };
 		F755934D21E6ABEB009BE194 /* ContentListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755934C21E6ABEB009BE194 /* ContentListDataSource.swift */; };
 		F755934F21E6BB73009BE194 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755934E21E6BB73009BE194 /* TextTableViewCell.swift */; };
+		F755935121E7E958009BE194 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F755935021E7E958009BE194 /* DetailViewController.swift */; };
 		F7BE7ED721E52C8A00CD0A07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7ED621E52C8A00CD0A07 /* AppDelegate.swift */; };
 		F7BE7ED921E52C8A00CD0A07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE7ED821E52C8A00CD0A07 /* ViewController.swift */; };
 		F7BE7EDE21E52C8C00CD0A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BE7EDD21E52C8C00CD0A07 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		F755934A21E5E77D009BE194 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		F755934C21E6ABEB009BE194 /* ContentListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListDataSource.swift; sourceTree = "<group>"; };
 		F755934E21E6BB73009BE194 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		F755935021E7E958009BE194 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F7BE7ED321E52C8A00CD0A07 /* AxxessCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxxessCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7BE7ED621E52C8A00CD0A07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7BE7ED821E52C8A00CD0A07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F7BE7ED821E52C8A00CD0A07 /* ViewController.swift */,
+				F755935021E7E958009BE194 /* DetailViewController.swift */,
 			);
 			path = "Controller ";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F755935121E7E958009BE194 /* DetailViewController.swift in Sources */,
 				F7BE7EFC21E5897500CD0A07 /* ContentType.swift in Sources */,
 				F755934B21E5E77D009BE194 /* ImageTableViewCell.swift in Sources */,
 				F7516E0D21E5BEDB0078D237 /* DateExtension.swift in Sources */,

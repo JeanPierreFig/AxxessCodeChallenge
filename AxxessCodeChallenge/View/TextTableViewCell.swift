@@ -49,11 +49,10 @@ class TextTableViewCell: UITableViewCell {
             self.contentView.addSubview(dateLabel)
             dateLabel.text = Date.dateFormat(date: date)
             dateLabel.snp.makeConstraints { (make) in
-                make.trailing.equalTo(self.contentView).offset(-5)
-                make.bottom.equalTo(self.contentView).offset(-15)
+                make.trailingMargin.equalTo(self.contentView).offset(-5)
+                make.bottomMargin.equalTo(self.contentView).offset(-15)
             }
         }
-        
     }
 }
 
