@@ -67,7 +67,7 @@ class ImageTableViewCell: UITableViewCell {
             make.topMargin.equalTo(self.contentView)
             make.leadingMargin.equalTo(self.contentView)
             make.trailingMargin.equalTo(self.contentView)
-            make.bottomMargin.equalTo(self.contentView).offset(-50)
+            make.bottomMargin.equalTo(self.contentView).offset(-50).priority(999)
         }
         
         //If date is avalable add the date label.

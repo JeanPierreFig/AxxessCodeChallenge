@@ -55,10 +55,10 @@ class ViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 10
         tableView.snp.makeConstraints { (make) in
-            make.leading.equalTo(self.view)
-            make.trailing.equalTo(self.view)
-            make.top.equalTo(self.view)
-            make.bottom.equalTo(self.view)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
 }

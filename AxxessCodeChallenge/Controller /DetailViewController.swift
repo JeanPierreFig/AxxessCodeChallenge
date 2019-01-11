@@ -54,10 +54,6 @@ class DetailViewController: UIViewController {
         setupView()
     }
     
-    override func viewDidLayoutSubviews() {
-        setupView()
-    }
-    
     private func setupView() {
         //View Setup
         self.view.backgroundColor = UIColor.white
