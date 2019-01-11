@@ -12,7 +12,7 @@ class ContentListDataSource: NSObject, UITableViewDataSource {
     
     var dataSourceInSections = [[Content]]()
     
-    //Separate by type in to a new dic.
+    //Separate by type into a new dic.
     var dataSource: [Content]? {
         didSet {
             if let dataSource = dataSource {

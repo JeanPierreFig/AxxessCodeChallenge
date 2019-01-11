@@ -12,6 +12,8 @@ class TextTableViewCell: UITableViewCell {
 
     var data: Content? {
         didSet {
+            //Reset datalabel.
+            self.dateLabel.removeFromSuperview()
             contentLabel.text = data?.data
             setupView()
         }

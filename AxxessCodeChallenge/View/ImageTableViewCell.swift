@@ -69,8 +69,9 @@ class ImageTableViewCell: UITableViewCell {
     
     //Download image using the alamofireImage imageview extension
     private func getImage() {
-        //Reset imageview and no content label. This is needed because the cell is reused.
+        //Reset imageview, date label and no content label. This is needed because the cell is reused.
         self.noContentLabel.removeFromSuperview()
+        self.dateLabel.removeFromSuperview()
         contentImageView.image = nil
         
         guard let data = data?.data,

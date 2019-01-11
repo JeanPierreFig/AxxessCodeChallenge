@@ -82,7 +82,7 @@ class DetailViewController: UIViewController {
             }
         }
         
-        //Depending on the data type show imageview or text view.
+        //Depending on the data type, show imageview or text view.
         if data.type == .Image {
             self.view.addSubview(contentImageView)
             self.getImageFor(path: contentData)
