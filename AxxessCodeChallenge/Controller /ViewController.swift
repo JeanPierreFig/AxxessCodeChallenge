@@ -38,7 +38,6 @@ class ViewController: UIViewController {
             else {
                 
                 let alert = UIAlertController(title: NSLocalizedString("No connection", comment: ""), message: NSLocalizedString("Check if you are connected to the internet.", comment: ""), preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: nil))
                 alert.addAction(UIAlertAction(title: NSLocalizedString("Try again", comment: ""), style: .default, handler:{ _ in
                         //Call the network again.
                         self.networkCall()
