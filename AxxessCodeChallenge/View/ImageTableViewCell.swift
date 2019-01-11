@@ -45,6 +45,8 @@ class ImageTableViewCell: UITableViewCell {
     private func setupView() {
         self.contentView.addSubview(contentImageView)
         
+        //Display the imageview with a fix hight of 350
+        //This is done to keep the UI consistent
         contentImageView.snp.makeConstraints { (make) in
             make.height.equalTo(350)
             make.topMargin.equalTo(self.contentView)
@@ -58,12 +60,14 @@ class ImageTableViewCell: UITableViewCell {
             self.contentView.addSubview(dateLabel)
             dateLabel.text = Date.dateFormat(date: date)
             dateLabel.snp.makeConstraints { (make) in
+                //Display the label in the right corner of the cell.
                 make.trailingMargin.equalTo(self.contentView).offset(-5)
                 make.bottomMargin.equalTo(self.contentView).offset(-15)
             }
         }
     }
     
+    //Doneload image using the alamofireImage imageview extension
     private func getImage() {
         //Reset imageview and no content label. This is needed because the cell is reused.
         self.noContentLabel.removeFromSuperview()

@@ -57,7 +57,8 @@ class DetailViewController: UIViewController {
     private func setupView() {
         //View Setup
         self.view.backgroundColor = UIColor.white
-        //Content will show under the navigation bar when using "make.topMargin". The view needs to apply edgesForExtendedLayout with []
+        //Content will show under the navigation bar when using "make.topMargin" if not using the line below
+        //The view needs to apply edgesForExtendedLayout with []
         self.edgesForExtendedLayout = []
         
         //Unwrap data
@@ -105,6 +106,9 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //Doneload image using the alamofireImage imageview extension.
+    //In this case the image is not being downloaded from the server
+    //it's localy cached because it was already downloaded in the main view controller
     private func getImageFor(path: String) {
         guard let url =  URL(string: path) else { return }
         contentImageView.af_setImage(withURL: url, placeholderImage: nil, filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: .crossDissolve(0.8), runImageTransitionIfCached: false, completion: { (response) in

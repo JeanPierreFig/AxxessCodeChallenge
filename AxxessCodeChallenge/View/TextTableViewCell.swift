@@ -36,7 +36,8 @@ class TextTableViewCell: UITableViewCell {
     
     private func setupView() {
         self.contentView.addSubview(contentLabel)
-            
+        
+        //The size of the cell is dependent on the constraints below.
         contentLabel.snp.makeConstraints { (make) in
             make.topMargin.equalTo(self.contentView)
             make.leadingMargin.equalTo(self.contentView).offset(10)
