@@ -36,9 +36,10 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             }
             else {
-                let alert = UIAlertController(title: "No connection", message: "Check if you are connected to the internet.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                alert.addAction(UIAlertAction(title: "Try again", style: .default, handler:{ _ in
+                
+                let alert = UIAlertController(title: NSLocalizedString("No connection", comment: ""), message: NSLocalizedString("Check if you are connected to the internet.", comment: ""), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: nil))
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Try again", comment: ""), style: .default, handler:{ _ in
                         //Call the network again.
                         self.networkCall()
                     }))
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
     }
     
     private func setupView() {
+        self.title = "Axxess challenge"
         self.view.addSubview(tableView)
         
         tableView.delegate = self

@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
     lazy var noContentLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = UIColor.lightGray
-        label.text = "Could not load content."
+        label.text = NSLocalizedString("Could not load content.", comment: "")
         return label
     }()
     

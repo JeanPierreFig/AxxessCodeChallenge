@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  AxxessCodeChallenge
+
+  Created by Jean Pierre on 1/11/19.
+  Copyright © 2019 Jean Pierre. All rights reserved.
+*/
+
+"Could not load content." = "No se pudo cargar contenido.";
+"No connection" = "sin conexión";
+"Check if you are connected to the internet." = "Comprueba si estás conectado a internet.";
+"OK" = "OK";
+"Try again" = "Intentar de nuevo";
+"image" = "Imagen";
+"text" = "Texto";
+"other" = "Otro";
+

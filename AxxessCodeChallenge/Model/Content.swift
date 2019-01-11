@@ -19,6 +19,7 @@ public struct Content: Codable {
         id = try container.decode(String.self, forKey: .id)
         type = try container.decode(ContentType.self, forKey: .type)
         data = try container.decodeIfPresent(String.self, forKey: .data)
+        //Convert formated date string into date type. 
         let dateString: String? = try container.decodeIfPresent(String.self, forKey: .date)
         if let dateString = dateString {
             date = Date.stringToDate(dateString: dateString)

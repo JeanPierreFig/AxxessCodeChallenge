@@ -34,7 +34,7 @@ class ContentListDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         return ContentType.allCases.map({ $0.rawValue} )[section]
+         return ContentType.allCases.map({  NSLocalizedString( $0.rawValue, comment: "Localized the enum for the type." )} )[section]
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,13 +52,5 @@ class ContentListDataSource: NSObject, UITableViewDataSource {
           //  cell?.selectionStyle = .none
             return cell!
         }
-    }
-}
-
-extension ContentListDataSource: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailViewController()
-        vc.data = dataSourceInSections[indexPath.section][indexPath.row]
     }
 }
