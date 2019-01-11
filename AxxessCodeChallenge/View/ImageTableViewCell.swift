@@ -13,24 +13,7 @@ class ImageTableViewCell: UITableViewCell {
     
     var data: Content? {
         didSet {
-            //Reset imageview and no content label. This is needed because the cell is reused.
-            self.noContentLabel.removeFromSuperview()
-            contentImageView.image = nil
-            
-            guard let data = data?.data,
-                let url =  URL(string: data) else { return }
-            //Use AlamofireImage to populate the imageView
-            contentImageView.af_setImage(withURL: url, placeholderImage: nil, filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: .crossDissolve(0.8), runImageTransitionIfCached: false, completion: { (response) in
-                
-                //Show the no Content label if the image faild to load.
-                response.result.ifFailure {
-                    self.contentImageView.addSubview(self.noContentLabel)
-                    self.noContentLabel.snp.makeConstraints({ (make) in
-                        make.centerX.equalTo(self.contentImageView)
-                        make.centerY.equalTo(self.contentImageView)
-                    })
-                }
-            })
+            self.getImage()
         }
     }
     
@@ -79,5 +62,26 @@ class ImageTableViewCell: UITableViewCell {
                 make.bottomMargin.equalTo(self.contentView).offset(-15)
             }
         }
+    }
+    
+    private func getImage() {
+        //Reset imageview and no content label. This is needed because the cell is reused.
+        self.noContentLabel.removeFromSuperview()
+        contentImageView.image = nil
+        
+        guard let data = data?.data,
+            let url =  URL(string: data) else { return }
+        //Use AlamofireImage to populate the imageView
+        contentImageView.af_setImage(withURL: url, placeholderImage: nil, filter: nil, progress: nil, progressQueue: DispatchQueue.main, imageTransition: .crossDissolve(0.8), runImageTransitionIfCached: false, completion: { (response) in
+            
+            //Show the no Content label if the image faild to load.
+            response.result.ifFailure {
+                self.contentImageView.addSubview(self.noContentLabel)
+                self.noContentLabel.snp.makeConstraints({ (make) in
+                    make.centerX.equalTo(self.contentImageView)
+                    make.centerY.equalTo(self.contentImageView)
+                })
+            }
+        })
     }
 }
