@@ -72,7 +72,7 @@ class DetailViewController: UIViewController {
             make.topMargin.equalTo(self.view).offset(15)
         }
         
-        //If date is avalable add the date label.
+        //If date is available add the date label.
         if let date = data.date {
             self.view.addSubview(dateLabel)
             dateLabel.text = Date.dateFormat(date: date)
@@ -106,7 +106,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    //Doneload image using the alamofireImage imageview extension.
+    //Download image using the alamofireImage imageview extension.
     //In this case the image is not being downloaded from the server
     //it's localy cached because it was already downloaded in the main view controller
     private func getImageFor(path: String) {

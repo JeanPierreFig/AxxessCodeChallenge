@@ -55,7 +55,7 @@ class ImageTableViewCell: UITableViewCell {
             make.bottomMargin.equalTo(self.contentView).offset(-50).priority(999)
         }
         
-        //If date is avalable add the date label.
+        //If date is available add the date label.
         if let date = data?.date {
             self.contentView.addSubview(dateLabel)
             dateLabel.text = Date.dateFormat(date: date)
@@ -67,7 +67,7 @@ class ImageTableViewCell: UITableViewCell {
         }
     }
     
-    //Doneload image using the alamofireImage imageview extension
+    //Download image using the alamofireImage imageview extension
     private func getImage() {
         //Reset imageview and no content label. This is needed because the cell is reused.
         self.noContentLabel.removeFromSuperview()

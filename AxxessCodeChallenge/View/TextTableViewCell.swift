@@ -45,7 +45,7 @@ class TextTableViewCell: UITableViewCell {
             make.bottomMargin.equalTo(self.contentView).offset(-50)
         }
         
-        //If date is avalable add the date label.
+        //If date is available add the date label.
         if let date = data?.date {
             self.contentView.addSubview(dateLabel)
             dateLabel.text = Date.dateFormat(date: date)
