@@ -36,7 +36,6 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             }
             else {
-                
                 let alert = UIAlertController(title: NSLocalizedString("No connection", comment: ""), message: NSLocalizedString("Check if you are connected to the internet.", comment: ""), preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("Try again", comment: ""), style: .default, handler:{ _ in
                         //Call the network again.
@@ -67,7 +66,6 @@ class ViewController: UIViewController {
 //MARK: UITableViewDelegate
 
 extension ViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Deselect the row to remove the gray background color.
         tableView.deselectRow(at: indexPath, animated: true)
